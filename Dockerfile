@@ -1,6 +1,6 @@
 #Stage-1
 # Import base image
-FROM node:23 AS mainImage
+FROM node:23 AS development
 
 # Create a Work Directory
 WORKDIR /app
@@ -22,7 +22,7 @@ WORKDIR /app
 COPY . .
 
 # Copying the files from initialImage
-COPY --from=initialImage /app/node_modules ./node_modules
+COPY --from=development /app/node_modules ./node_modules
 
 # Exposing Port 
 EXPOSE 5173
