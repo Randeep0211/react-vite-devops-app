@@ -4,7 +4,7 @@ metadata:
   name: react-vite-app-service
   namespace: vite-app
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app.kubernetes.io/name: react-vite-app
   ports:
